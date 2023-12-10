@@ -58,8 +58,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblDetails2 = new System.Windows.Forms.Label();
             this.lblCondition2 = new System.Windows.Forms.Label();
+            this.stsError = new System.Windows.Forms.StatusStrip();
+            this.toolError = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon2)).BeginInit();
+            this.stsError.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -88,7 +91,7 @@
             this.btnSearch.Location = new System.Drawing.Point(218, 116);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(83, 42);
-            this.btnSearch.TabIndex = 2;
+            this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -99,7 +102,7 @@
             this.txtCity2.Location = new System.Drawing.Point(513, 60);
             this.txtCity2.Name = "txtCity2";
             this.txtCity2.Size = new System.Drawing.Size(217, 35);
-            this.txtCity2.TabIndex = 4;
+            this.txtCity2.TabIndex = 2;
             // 
             // label2
             // 
@@ -110,7 +113,7 @@
             this.label2.Location = new System.Drawing.Point(448, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 27);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 24;
             this.label2.Text = "City:";
             // 
             // lblCondition
@@ -122,7 +125,7 @@
             this.lblCondition.Location = new System.Drawing.Point(73, 217);
             this.lblCondition.Name = "lblCondition";
             this.lblCondition.Size = new System.Drawing.Size(107, 27);
-            this.lblCondition.TabIndex = 5;
+            this.lblCondition.TabIndex = 6;
             this.lblCondition.Text = "Condition";
             // 
             // lblDetails
@@ -248,7 +251,7 @@
             this.btnSearch2.Location = new System.Drawing.Point(576, 116);
             this.btnSearch2.Name = "btnSearch2";
             this.btnSearch2.Size = new System.Drawing.Size(83, 42);
-            this.btnSearch2.TabIndex = 16;
+            this.btnSearch2.TabIndex = 4;
             this.btnSearch2.Text = "Search";
             this.btnSearch2.UseVisualStyleBackColor = true;
             this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
@@ -259,7 +262,7 @@
             this.btnBoth.Location = new System.Drawing.Point(380, 163);
             this.btnBoth.Name = "btnBoth";
             this.btnBoth.Size = new System.Drawing.Size(127, 34);
-            this.btnBoth.TabIndex = 17;
+            this.btnBoth.TabIndex = 5;
             this.btnBoth.Text = "Search Both";
             this.btnBoth.UseVisualStyleBackColor = true;
             this.btnBoth.Click += new System.EventHandler(this.btnBoth_Click);
@@ -393,6 +396,21 @@
             this.lblCondition2.TabIndex = 18;
             this.lblCondition2.Text = "Condition";
             // 
+            // stsError
+            // 
+            this.stsError.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.stsError.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolError});
+            this.stsError.Location = new System.Drawing.Point(0, 422);
+            this.stsError.Name = "stsError";
+            this.stsError.Size = new System.Drawing.Size(800, 28);
+            this.stsError.TabIndex = 29;
+            // 
+            // toolError
+            // 
+            this.toolError.Name = "toolError";
+            this.toolError.Size = new System.Drawing.Size(0, 21);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -400,6 +418,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.stsError);
             this.Controls.Add(this.picIcon2);
             this.Controls.Add(this.lblHumidityDetails2);
             this.Controls.Add(this.label4);
@@ -434,6 +453,8 @@
             this.Text = "Weather App";
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon2)).EndInit();
+            this.stsError.ResumeLayout(false);
+            this.stsError.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,6 +491,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblDetails2;
         private System.Windows.Forms.Label lblCondition2;
+        private System.Windows.Forms.StatusStrip stsError;
+        private System.Windows.Forms.ToolStripStatusLabel toolError;
     }
 }
 

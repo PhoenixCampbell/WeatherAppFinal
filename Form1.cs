@@ -31,8 +31,15 @@ namespace WeatherAppFinal
         }
         private void btnBoth_Click(object sender, EventArgs e)
         {
-            getWeather();
-            getWeather2();
+            if (string.IsNullOrEmpty(txtCity1.Text) || string.IsNullOrEmpty(txtCity2.Text))
+            {
+                toolError.Text = "Error: Must Have Valid Major Cities In Both Boxes.";
+            }
+            else
+            {
+                getWeather();
+                getWeather2();
+            }
         }
         void getWeather()
         {
@@ -41,7 +48,7 @@ namespace WeatherAppFinal
                 string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", txtCity1.Text, APIKey);
                 var json = web.DownloadString(url);
                 WeatherInformation.root Info = JsonConvert.DeserializeObject<WeatherInformation.root>(json);
-                picIcon.ImageLocation = "https://openweathermap.org/img/w/" + Info.weather[0].icon +".png";
+                picIcon.ImageLocation = "https://openweathermap.org/img/w/" + Info.weather[0].icon + ".png";
                 lblCondition.Text = Info.weather[0].main;
                 lblDetails.Text = Info.weather[0].description;
                 lblSunRiseDetails.Text = Info.sys.sunrise.ToString();
@@ -66,7 +73,5 @@ namespace WeatherAppFinal
                 lblHumidityDetails2.Text = Info.main.humidity.ToString();
             }
         }
-
-
     }
 }
