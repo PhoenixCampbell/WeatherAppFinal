@@ -66,7 +66,7 @@ namespace WeatherAppFinal
                 lblWindSpdDetails.Text = Info.wind.speed.ToString();
                 lblHumidityDetails.Text = Info.main.humidity.ToString();
                 lblTempDetails.Text = Info.main.temp.ToString();
-                lblFeelDetails.Text = Info.main.temp.ToString();
+                lblFeelDetails.Text = Info.main.feels_like.ToString();
             }
         }
         void getWeather2()
@@ -84,7 +84,7 @@ namespace WeatherAppFinal
                 lblWindSpdDetails2.Text = Info.wind.speed.ToString();
                 lblHumidityDetails2.Text = Info.main.humidity.ToString();
                 lblTempDetails2.Text = Info.main.temp.ToString();
-                lblFeelDetails2.Text = Info.main.temp.ToString();
+                lblFeelDetails2.Text = Info.main.feels_like.ToString();
             }
         }
         DateTime convert(long sec)
