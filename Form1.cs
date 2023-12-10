@@ -25,7 +25,7 @@ namespace WeatherAppFinal
         {
             if (string.IsNullOrEmpty(txtCity1.Text))
             {
-                toolError.Text = "Error: Must Have Valid Major City In First SearchBox.";
+                toolError.Text = "Error: Must Have Valid Major City/Country In First SearchBox.";
             }
             else
                 getWeather();
@@ -34,7 +34,7 @@ namespace WeatherAppFinal
         {
             if (string.IsNullOrEmpty(txtCity2.Text))
             {
-                toolError.Text = "Error: Must Have Valid Major City In Second SearchBox.";
+                toolError.Text = "Error: Must Have Valid Major City/Country In Second SearchBox.";
             }
             else
                 getWeather2();
@@ -43,7 +43,7 @@ namespace WeatherAppFinal
         {
             if (string.IsNullOrEmpty(txtCity1.Text) || string.IsNullOrEmpty(txtCity2.Text))
             {
-                toolError.Text = "Error: Must Have Valid Major Cities In Both Boxes.";
+                toolError.Text = "Error: Must Have Valid Major Cities/Countries In Both Boxes.";
             }
             else
             {
