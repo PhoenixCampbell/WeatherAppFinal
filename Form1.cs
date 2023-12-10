@@ -58,7 +58,7 @@ namespace WeatherAppFinal
                 string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units=imperial&appid={1}", txtCity1.Text, APIKey);
                 var json = web.DownloadString(url);
                 WeatherInformation.root Info = JsonConvert.DeserializeObject<WeatherInformation.root>(json);
-                picIcon.ImageLocation = "https://openweathermap.org/img/w/"+Info.weather[0].icon+".png";
+                //picIcon.ImageLocation = "https://openweathermap.org/img/w/"+Info.weather[0].icon+".png";
                 lblCondition.Text = Info.weather[0].main;
                 lblDetails.Text = Info.weather[0].description;
                 lblSunRiseDetails.Text = convert(Info.sys.sunrise).ToString();
@@ -76,7 +76,7 @@ namespace WeatherAppFinal
                 string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units=imperial&appid={1}", txtCity2.Text, APIKey);
                 var json = web.DownloadString(url);
                 WeatherInformation.root Info = JsonConvert.DeserializeObject<WeatherInformation.root>(json);
-                picIcon2.ImageLocation = "https://openweathermap.org/img/w/" + Info.weather[0].icon + ".png";
+                //picIcon2.ImageLocation = "https://openweathermap.org/img/w/" + Info.weather[0].icon + ".png";
                 lblCondition2.Text = Info.weather[0].main;
                 lblDetails2.Text = Info.weather[0].description;
                 lblSunRiseDetails2.Text = convert(Info.sys.sunrise).ToString();
