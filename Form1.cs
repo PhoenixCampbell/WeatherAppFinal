@@ -23,11 +23,21 @@ namespace WeatherAppFinal
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            getWeather();
+            if (string.IsNullOrEmpty(txtCity1.Text))
+            {
+                toolError.Text = "Error: Must Have Valid Major City In First SearchBox.";
+            }
+            else
+                getWeather();
         }
         private void btnSearch2_Click(object sender, EventArgs e)
         {
-            getWeather2();
+            if (string.IsNullOrEmpty(txtCity2.Text))
+            {
+                toolError.Text = "Error: Must Have Valid Major City In Second SearchBox.";
+            }
+            else
+                getWeather2();
         }
         private void btnBoth_Click(object sender, EventArgs e)
         {
@@ -48,7 +58,7 @@ namespace WeatherAppFinal
                 string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", txtCity1.Text, APIKey);
                 var json = web.DownloadString(url);
                 WeatherInformation.root Info = JsonConvert.DeserializeObject<WeatherInformation.root>(json);
-                picIcon.ImageLocation = "https://openweathermap.org/img/w/" + Info.weather[0].icon + ".png";
+                picIcon.ImageLocation = "https://openweathermap.org/img/w/"+Info.weather[0].icon+".png";
                 lblCondition.Text = Info.weather[0].main;
                 lblDetails.Text = Info.weather[0].description;
                 lblSunRiseDetails.Text = Info.sys.sunrise.ToString();
