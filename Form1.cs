@@ -55,7 +55,7 @@ namespace WeatherAppFinal
         {
             using (WebClient web =  new WebClient())
             {
-                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", txtCity1.Text, APIKey);
+                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units=imperial&appid={1}", txtCity1.Text, APIKey);
                 var json = web.DownloadString(url);
                 WeatherInformation.root Info = JsonConvert.DeserializeObject<WeatherInformation.root>(json);
                 picIcon.ImageLocation = "https://openweathermap.org/img/w/"+Info.weather[0].icon+".png";
@@ -65,13 +65,15 @@ namespace WeatherAppFinal
                 lblSunSetDetails.Text = convert(Info.sys.sunset).ToString();
                 lblWindSpdDetails.Text = Info.wind.speed.ToString();
                 lblHumidityDetails.Text = Info.main.humidity.ToString();
+                lblTempDetails.Text = Info.main.temp.ToString();
+                lblFeelDetails.Text = Info.main.temp.ToString();
             }
         }
         void getWeather2()
         {
             using (WebClient web = new WebClient())
             {
-                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", txtCity2.Text, APIKey);
+                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&units=imperial&appid={1}", txtCity2.Text, APIKey);
                 var json = web.DownloadString(url);
                 WeatherInformation.root Info = JsonConvert.DeserializeObject<WeatherInformation.root>(json);
                 picIcon2.ImageLocation = "https://openweathermap.org/img/w/" + Info.weather[0].icon + ".png";
@@ -81,6 +83,8 @@ namespace WeatherAppFinal
                 lblSunSetDetails2.Text = convert(Info.sys.sunset).ToString();
                 lblWindSpdDetails2.Text = Info.wind.speed.ToString();
                 lblHumidityDetails2.Text = Info.main.humidity.ToString();
+                lblTempDetails2.Text = Info.main.temp.ToString();
+                lblFeelDetails2.Text = Info.main.temp.ToString();
             }
         }
         DateTime convert(long sec)
@@ -89,5 +93,6 @@ namespace WeatherAppFinal
             day = day.AddSeconds(sec);
             return day;
         }
+        
     }
 }

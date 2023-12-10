@@ -60,6 +60,14 @@
             this.lblCondition2 = new System.Windows.Forms.Label();
             this.stsError = new System.Windows.Forms.StatusStrip();
             this.toolError = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblFeelDetails = new System.Windows.Forms.Label();
+            this.lblFeel = new System.Windows.Forms.Label();
+            this.lblTempDetails = new System.Windows.Forms.Label();
+            this.lblTemp = new System.Windows.Forms.Label();
+            this.lblFeelDetails2 = new System.Windows.Forms.Label();
+            this.lblFeel2 = new System.Windows.Forms.Label();
+            this.lblTempDetails2 = new System.Windows.Forms.Label();
+            this.lblTemp2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon2)).BeginInit();
             this.stsError.SuspendLayout();
@@ -88,7 +96,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(218, 116);
+            this.btnSearch.Location = new System.Drawing.Point(296, 116);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(83, 42);
             this.btnSearch.TabIndex = 3;
@@ -239,7 +247,7 @@
             // picIcon
             // 
             this.picIcon.BackColor = System.Drawing.Color.Transparent;
-            this.picIcon.Location = new System.Drawing.Point(288, 298);
+            this.picIcon.Location = new System.Drawing.Point(123, 121);
             this.picIcon.Name = "picIcon";
             this.picIcon.Size = new System.Drawing.Size(130, 76);
             this.picIcon.TabIndex = 15;
@@ -248,7 +256,7 @@
             // btnSearch2
             // 
             this.btnSearch2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch2.Location = new System.Drawing.Point(576, 116);
+            this.btnSearch2.Location = new System.Drawing.Point(513, 116);
             this.btnSearch2.Name = "btnSearch2";
             this.btnSearch2.Size = new System.Drawing.Size(83, 42);
             this.btnSearch2.TabIndex = 4;
@@ -270,7 +278,7 @@
             // picIcon2
             // 
             this.picIcon2.BackColor = System.Drawing.Color.Transparent;
-            this.picIcon2.Location = new System.Drawing.Point(650, 298);
+            this.picIcon2.Location = new System.Drawing.Point(630, 121);
             this.picIcon2.Name = "picIcon2";
             this.picIcon2.Size = new System.Drawing.Size(129, 76);
             this.picIcon2.TabIndex = 28;
@@ -411,6 +419,102 @@
             this.toolError.Name = "toolError";
             this.toolError.Size = new System.Drawing.Size(0, 15);
             // 
+            // lblFeelDetails
+            // 
+            this.lblFeelDetails.AutoSize = true;
+            this.lblFeelDetails.BackColor = System.Drawing.Color.Transparent;
+            this.lblFeelDetails.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeelDetails.ForeColor = System.Drawing.Color.White;
+            this.lblFeelDetails.Location = new System.Drawing.Point(326, 381);
+            this.lblFeelDetails.Name = "lblFeelDetails";
+            this.lblFeelDetails.Size = new System.Drawing.Size(53, 27);
+            this.lblFeelDetails.TabIndex = 33;
+            this.lblFeelDetails.Text = "N/A";
+            // 
+            // lblFeel
+            // 
+            this.lblFeel.AutoSize = true;
+            this.lblFeel.BackColor = System.Drawing.Color.Transparent;
+            this.lblFeel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeel.ForeColor = System.Drawing.Color.White;
+            this.lblFeel.Location = new System.Drawing.Point(212, 381);
+            this.lblFeel.Name = "lblFeel";
+            this.lblFeel.Size = new System.Drawing.Size(118, 27);
+            this.lblFeel.TabIndex = 32;
+            this.lblFeel.Text = "Feels Like:";
+            // 
+            // lblTempDetails
+            // 
+            this.lblTempDetails.AutoSize = true;
+            this.lblTempDetails.BackColor = System.Drawing.Color.Transparent;
+            this.lblTempDetails.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTempDetails.ForeColor = System.Drawing.Color.White;
+            this.lblTempDetails.Location = new System.Drawing.Point(153, 381);
+            this.lblTempDetails.Name = "lblTempDetails";
+            this.lblTempDetails.Size = new System.Drawing.Size(53, 27);
+            this.lblTempDetails.TabIndex = 31;
+            this.lblTempDetails.Text = "N/A";
+            // 
+            // lblTemp
+            // 
+            this.lblTemp.AutoSize = true;
+            this.lblTemp.BackColor = System.Drawing.Color.Transparent;
+            this.lblTemp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTemp.ForeColor = System.Drawing.Color.White;
+            this.lblTemp.Location = new System.Drawing.Point(73, 381);
+            this.lblTemp.Name = "lblTemp";
+            this.lblTemp.Size = new System.Drawing.Size(71, 27);
+            this.lblTemp.TabIndex = 30;
+            this.lblTemp.Text = "Temp:";
+            // 
+            // lblFeelDetails2
+            // 
+            this.lblFeelDetails2.AutoSize = true;
+            this.lblFeelDetails2.BackColor = System.Drawing.Color.Transparent;
+            this.lblFeelDetails2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeelDetails2.ForeColor = System.Drawing.Color.White;
+            this.lblFeelDetails2.Location = new System.Drawing.Point(682, 381);
+            this.lblFeelDetails2.Name = "lblFeelDetails2";
+            this.lblFeelDetails2.Size = new System.Drawing.Size(53, 27);
+            this.lblFeelDetails2.TabIndex = 37;
+            this.lblFeelDetails2.Text = "N/A";
+            // 
+            // lblFeel2
+            // 
+            this.lblFeel2.AutoSize = true;
+            this.lblFeel2.BackColor = System.Drawing.Color.Transparent;
+            this.lblFeel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeel2.ForeColor = System.Drawing.Color.White;
+            this.lblFeel2.Location = new System.Drawing.Point(568, 381);
+            this.lblFeel2.Name = "lblFeel2";
+            this.lblFeel2.Size = new System.Drawing.Size(118, 27);
+            this.lblFeel2.TabIndex = 36;
+            this.lblFeel2.Text = "Feels Like:";
+            // 
+            // lblTempDetails2
+            // 
+            this.lblTempDetails2.AutoSize = true;
+            this.lblTempDetails2.BackColor = System.Drawing.Color.Transparent;
+            this.lblTempDetails2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTempDetails2.ForeColor = System.Drawing.Color.White;
+            this.lblTempDetails2.Location = new System.Drawing.Point(509, 381);
+            this.lblTempDetails2.Name = "lblTempDetails2";
+            this.lblTempDetails2.Size = new System.Drawing.Size(53, 27);
+            this.lblTempDetails2.TabIndex = 35;
+            this.lblTempDetails2.Text = "N/A";
+            // 
+            // lblTemp2
+            // 
+            this.lblTemp2.AutoSize = true;
+            this.lblTemp2.BackColor = System.Drawing.Color.Transparent;
+            this.lblTemp2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTemp2.ForeColor = System.Drawing.Color.White;
+            this.lblTemp2.Location = new System.Drawing.Point(439, 381);
+            this.lblTemp2.Name = "lblTemp2";
+            this.lblTemp2.Size = new System.Drawing.Size(71, 27);
+            this.lblTemp2.TabIndex = 34;
+            this.lblTemp2.Text = "Temp:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -418,6 +522,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblFeelDetails2);
+            this.Controls.Add(this.lblFeel2);
+            this.Controls.Add(this.lblTempDetails2);
+            this.Controls.Add(this.lblTemp2);
+            this.Controls.Add(this.lblFeelDetails);
+            this.Controls.Add(this.lblFeel);
+            this.Controls.Add(this.lblTempDetails);
+            this.Controls.Add(this.lblTemp);
             this.Controls.Add(this.stsError);
             this.Controls.Add(this.picIcon2);
             this.Controls.Add(this.lblHumidityDetails2);
@@ -493,6 +605,14 @@
         private System.Windows.Forms.Label lblCondition2;
         private System.Windows.Forms.StatusStrip stsError;
         private System.Windows.Forms.ToolStripStatusLabel toolError;
+        private System.Windows.Forms.Label lblFeelDetails;
+        private System.Windows.Forms.Label lblFeel;
+        private System.Windows.Forms.Label lblTempDetails;
+        private System.Windows.Forms.Label lblTemp;
+        private System.Windows.Forms.Label lblFeelDetails2;
+        private System.Windows.Forms.Label lblFeel2;
+        private System.Windows.Forms.Label lblTempDetails2;
+        private System.Windows.Forms.Label lblTemp2;
     }
 }
 
