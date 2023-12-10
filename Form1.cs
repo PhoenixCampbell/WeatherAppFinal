@@ -83,10 +83,10 @@ namespace WeatherAppFinal
                 lblHumidityDetails2.Text = Info.main.humidity.ToString();
             }
         }
-        DateTime convert(long milli)
+        DateTime convert(long sec)
         {
             DateTime day = new DateTime(1970, 1, 1, 0, 0,0,0, System.DateTimeKind.Utc).ToLocalTime();
-            day = day.AddMilliseconds(milli);
+            day = day.AddSeconds(sec);
             return day;
         }
     }
