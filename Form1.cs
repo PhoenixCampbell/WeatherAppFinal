@@ -61,8 +61,8 @@ namespace WeatherAppFinal
                 picIcon.ImageLocation = "https://openweathermap.org/img/w/"+Info.weather[0].icon+".png";
                 lblCondition.Text = Info.weather[0].main;
                 lblDetails.Text = Info.weather[0].description;
-                lblSunRiseDetails.Text = Info.sys.sunrise.ToString();
-                lblSunSetDetails.Text = Info.sys.sunset.ToString();
+                lblSunRiseDetails.Text = convert(Info.sys.sunrise).ToString();
+                lblSunSetDetails.Text = convert(Info.sys.sunset).ToString();
                 lblWindSpdDetails.Text = Info.wind.speed.ToString();
                 lblHumidityDetails.Text = Info.main.humidity.ToString();
             }
@@ -77,11 +77,17 @@ namespace WeatherAppFinal
                 picIcon2.ImageLocation = "https://openweathermap.org/img/w/" + Info.weather[0].icon + ".png";
                 lblCondition2.Text = Info.weather[0].main;
                 lblDetails2.Text = Info.weather[0].description;
-                lblSunRiseDetails2.Text = Info.sys.sunrise.ToString();
-                lblSunSetDetails2.Text = Info.sys.sunset.ToString();
+                lblSunRiseDetails2.Text = convert(Info.sys.sunrise).ToString();
+                lblSunSetDetails2.Text = convert(Info.sys.sunset).ToString();
                 lblWindSpdDetails2.Text = Info.wind.speed.ToString();
                 lblHumidityDetails2.Text = Info.main.humidity.ToString();
             }
+        }
+        DateTime convert(long milli)
+        {
+            DateTime day = new DateTime(1970, 1, 1, 0, 0,0,0, System.DateTimeKind.Utc).ToLocalTime();
+            day = day.AddMilliseconds(milli);
+            return day;
         }
     }
 }

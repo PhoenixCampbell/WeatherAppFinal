@@ -239,9 +239,9 @@
             // picIcon
             // 
             this.picIcon.BackColor = System.Drawing.Color.Transparent;
-            this.picIcon.Location = new System.Drawing.Point(298, 298);
+            this.picIcon.Location = new System.Drawing.Point(288, 298);
             this.picIcon.Name = "picIcon";
-            this.picIcon.Size = new System.Drawing.Size(100, 50);
+            this.picIcon.Size = new System.Drawing.Size(130, 76);
             this.picIcon.TabIndex = 15;
             this.picIcon.TabStop = false;
             // 
@@ -272,7 +272,7 @@
             this.picIcon2.BackColor = System.Drawing.Color.Transparent;
             this.picIcon2.Location = new System.Drawing.Point(650, 298);
             this.picIcon2.Name = "picIcon2";
-            this.picIcon2.Size = new System.Drawing.Size(100, 50);
+            this.picIcon2.Size = new System.Drawing.Size(129, 76);
             this.picIcon2.TabIndex = 28;
             this.picIcon2.TabStop = false;
             // 
@@ -401,15 +401,15 @@
             this.stsError.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.stsError.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolError});
-            this.stsError.Location = new System.Drawing.Point(0, 422);
+            this.stsError.Location = new System.Drawing.Point(0, 428);
             this.stsError.Name = "stsError";
-            this.stsError.Size = new System.Drawing.Size(800, 28);
+            this.stsError.Size = new System.Drawing.Size(800, 22);
             this.stsError.TabIndex = 29;
             // 
             // toolError
             // 
             this.toolError.Name = "toolError";
-            this.toolError.Size = new System.Drawing.Size(0, 21);
+            this.toolError.Size = new System.Drawing.Size(0, 15);
             // 
             // Form1
             // 
